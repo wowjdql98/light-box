@@ -1,56 +1,97 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
 
 
-body{
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     /* 가로세로 모드 -  */
     flex-direction: column;
-    
+
 }
 
-h2{
+h2 {
     margin-bottom: 1em;
     font-size: 2em;
 }
 
-#gallery{
+#gallery {
     /* 목록정리 -밀리지않게 wrap 처리  */
     display: flex;
     flex-wrap: wrap;
-    background: #ccc;
+    /* background: #ccc; */
     justify-content: center;
+    gap: 10px;
 }
 
-#gallery > li {
+#gallery>li {
     width: 200px;
     height: 120px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
-#gallery > li > img {
+
+#gallery>li>img {
     width: 100%;
     height: 120px;
     object-fit: cover;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
+
+
+#gallery > li:hover {
+    cursor: pointer;
+    outline: 4px solid red;
+
+}
+
 
 /* light box 기본 - 안보임 */
 
-#lightbox{
+#lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* 보임 */
+#lightbox.on{
+    display: flex;
+    
+}
+
+#lightbox .box {
+    position: relative;
+}
+
+#lightbox .box #closebtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#closebtn{
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    /* 커서모양 변경 */
+    cursor: pointer; 
+    
 }

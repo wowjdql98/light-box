@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>light box ui</title>
-    <script src="app.js"></script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,9 +21,13 @@
 
     <!-- 팝업 -->
     <div id="lightbox">
-        <img src="images/01.jpg" alt="light box image">
-        <button id="closebtn">x close</button>
-        
+        <div class="box">
+            <img src="images/01.jpg" alt="light box image">
+            <button id="closebtn" onclick="closebtn">x</button>
+        </div>
     </div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
