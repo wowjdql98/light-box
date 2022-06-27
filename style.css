@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* 가로세로 모드 -  */
+    flex-direction: column;
+    
+}
+
+h2{
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+#gallery{
+    /* 목록정리 -밀리지않게 wrap 처리  */
+    display: flex;
+    flex-wrap: wrap;
+    background: #ccc;
+    justify-content: center;
+}
+
+#gallery > li {
+    width: 200px;
+    height: 120px;
+    outline: 1px solid red;
+}
+#gallery > li > img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* light box 기본 - 안보임 */
+
+#lightbox{
+    position: fixed;
+    display: none;
+}
